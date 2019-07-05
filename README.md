@@ -1,2 +1,3 @@
 # ASP.NETCore_1
-First asp.net project
+This is test project for PartyInvitations;
+It show start the project and main strcucture of MVC.

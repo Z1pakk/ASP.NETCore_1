@@ -19,7 +19,14 @@ namespace PartyInvites.Controllers
         {
             int hour = DateTime.Now.Hour;
             ViewBag.Greeting = hour < 12 ? "Good Morning" : "Good Afternoon";
+            //Показуэться вюшка з назвою MyView.cshtml
             return View("MyView");
+        }
+
+        public ViewResult RsvpForm()
+        {
+            //Якщо знайдеться вюшка з назвою RsvpForm.cshtml то вона покажеться
+            return View();
         }
     }
 }
