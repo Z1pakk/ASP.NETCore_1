@@ -15,6 +15,9 @@ namespace PartyInvites.Controllers
         //    return "Hello world";
         //}
 
-        public 
+        public ViewResult Index()
+        {
+            return View("MyView");
+        }
     }
 }
