@@ -11,12 +11,13 @@
 <body>
     <div>
         @ViewBag.Greeting World(from the view)
-        <p>We' re going to have an exciting party<br />
-        (To do: sell it better. Add pictures or something.)
-        @*Це той самий елемент a який має тільки атрибут asp-action.
-        asp-action - це href тільки він перекідає на інший метод в контроллері.*@
-        <a asp-action="RsvpForm">RSVP Now</a>
+        <p>
+            We' re going to have an exciting party<br />
+            (To do: sell it better. Add pictures or something.)
+            @*Це той самий елемент a який має тільки атрибут asp-action.
+            asp-action - це href тільки він перекідає на інший метод в контроллері.*@
         </p>
+        <a asp-action="RsvpForm">RSVP Now</a>
     </div>
 </body>
 </html>
