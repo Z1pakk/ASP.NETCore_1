@@ -23,9 +23,17 @@ namespace PartyInvites.Controllers
             return View("MyView");
         }
 
+        [HttpGet]
         public ViewResult RsvpForm()
         {
             //Якщо знайдеться вюшка з назвою RsvpForm.cshtml то вона покажеться
+            return View();
+        }
+
+        [HttpPost]
+        public ViewResult RsvpForm(GuestResponse guestResponse)
+        {
+            // TODO: Save answer from guest
             return View();
         }
     }
