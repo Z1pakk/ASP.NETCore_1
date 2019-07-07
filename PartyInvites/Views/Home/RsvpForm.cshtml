@@ -19,6 +19,7 @@
 <body>
     @*asp-for прив'язує елементи до об'єкта моделі.*@
     <form asp-action="RsvpForm" method="post">
+        <div asp-validation-summary="All"></div>
         <p>
             <label asp-for="Name">Your name:</label>
             <input asp-for="Name" />

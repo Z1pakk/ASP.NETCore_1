@@ -33,11 +33,19 @@ namespace PartyInvites.Controllers
         [HttpPost]
         public ViewResult RsvpForm(GuestResponse guestResponse)
         {
+            if (ModelState.IsValid)
+            {
+                Repository.AddResponse(guestResponse);
+                //Цей метод каже що потрібно визвати 
+                //представлення 'Thanks' і передаємо туда нашу модель
+                return View("Thanks", guestResponse);
 
-            Repository.AddResponse(guestResponse);
-            //Цей метод каже що потрібно визвати 
-            //представлення 'Thanks' і передаємо туда нашу модель
-            return View("Thanks",guestResponse);
+            }
+            else
+            {
+                //Помилка достовірності данних
+                return View();
+            }
         }
         //Секрет кроется в привязке модели -удобной функциональной возможности МVС, посредством которой производится разбор входящих данных и применение пар "ключ/значение" в НТГР-запросе для заполнения свойств в типах моделей предметной области.
         //Привязка модели - мощное и настраиваемое средство, которое избавляет от кропотливого и тяжелого труда по взаимодействию с НТTР-запросами напрямую и позволяет
