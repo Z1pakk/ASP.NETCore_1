@@ -6,8 +6,9 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Thanks</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
 </head>
-<body>
+<body class="text-center">
     <p>
         <h1>Thank you, @Model.Name!</h1>
         @if (Model.WillAttend == true)
@@ -22,7 +23,7 @@
     </p>
     @*С применением атрибута вспомогательной функции дескриптора asp - acti on
     создается URL, который нацелен на метод действия по имени ListResponses ():*@
-    <p>Click <a asp-action="ListResponses">here</a> to see who is coming.</p>
+    Click <a class="nav-link" asp-action="ListResponses">here</a> to see who is coming.
 </body>
 </html>
 
